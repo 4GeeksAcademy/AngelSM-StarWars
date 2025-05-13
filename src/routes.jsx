@@ -7,8 +7,14 @@ import {
 } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
-import { Single } from "./pages/Single";
-import { Demo } from "./pages/Demo";
+import Characters from "./pages/Chatacters";
+import CharacterDetail from "./pages/CharacterDetail";
+import Planets from "./pages/Planets";
+import PlanetDetail from "./pages/PlanetDetail";
+import Vehicles from "./pages/Vehicles";
+import VehicleDetail from "./pages/VehicleDetail";
+import Favorites from "./pages/Favorites";
+
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,8 +29,14 @@ export const router = createBrowserRouter(
 
         {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
         <Route path= "/" element={<Home />} />
-        <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
-        <Route path="/demo" element={<Demo />} />
+        <Route path="characters" element={<Characters />} />
+        <Route path="characters/:characterId" element={<CharacterDetail />} />
+        <Route path="planets" element={<Planets />} />
+        <Route path="planets/:planetId" element={<PlanetDetail />} />
+        <Route path="vehicles" element={<Vehicles />} />
+        <Route path="vehicles/:vehicleId" element={<VehicleDetail />} />
+        <Route path="favorites" element={<Favorites />} />
+        
       </Route>
     )
 );

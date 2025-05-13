@@ -1,5 +1,5 @@
 // Import necessary hooks and functions from React.
-import { useContext, useReducer, createContext } from "react";
+import { useContext, useReducer, createContext, useCallback } from "react";
 import storeReducer, { initialStore } from "../store"  // Import the reducer and the initial state.
 
 // Create a context to hold the global state of the application
